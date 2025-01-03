@@ -49,7 +49,7 @@ public class Testauto {
     @Test
     public void testLogin() {
         // Set up the Chrome WebDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver-win64\\chromedriver.exe");
 
         // Configure ChromeOptions for specific testing needs
         ChromeOptions options = new ChromeOptions();
