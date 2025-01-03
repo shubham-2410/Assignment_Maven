@@ -40,7 +40,6 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                echo 'Starting SonarQube analysis...'
                 withSonarQubeEnv('sonarqube-server') {
                     bat '''
                     mvn sonar:sonar ^
@@ -62,14 +61,10 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'Pipeline executed successfully!'
         }
         failure {
             echo 'Pipeline failed. Please check the logs for details.'
-        }
-        always {
-            archiveArtifacts artifacts: '**/target/surefire-reports/*.xml', allowEmptyArchive: true
-            archiveArtifacts artifacts: '**/target/*.log', allowEmptyArchive: true
         }
     }
 }
