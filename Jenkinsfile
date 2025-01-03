@@ -6,7 +6,7 @@ pipeline {
     }
 
     tools {
-        maven 'maven' // Refers to the Maven auto-installation configured in Jenkins
+        maven 'sonarmaven' // Refers to the Maven auto-installation configured in Jenkins
     }
 
     stages {
